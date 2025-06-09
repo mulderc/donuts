@@ -45,7 +45,9 @@ save_data <- function(data) {
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Donut Survey"),
+  
+  img(src = "logo_2025.png", height = 200, width = 200, style = "display: block; margin-left: auto; margin-right: auto;"),
+  titlePanel("Cascadia R 2025 Donut Survey"),
   
   sidebarLayout(
     sidebarPanel(
