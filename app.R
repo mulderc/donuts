@@ -55,9 +55,11 @@ ui <- fluidPage(
       selectInput("donut_type", 
                   "Which  donut did you have?",
                   choices = c("Choose a type..." = "",
-                              "Old Fasioned",
-                              "Crunch",
-                              "Frosted Chocolate"),
+                              "Mikiko Mochi Donuts",
+                              "Coco Donuts",
+                              "Voodoo doughnut",
+                              "Bluestar Donuts",
+                              "Doe Donuts"),
                   selected = ""),
       
       # Rating input
@@ -217,7 +219,7 @@ server <- function(input, output, session) {
       geom_col(fill = "steelblue", alpha = 0.7) +
       geom_text(aes(label = round(avg_rating, 1)), 
                 hjust = -0.1, size = 4) +
-      coord_flip() +
+      #coord_flip() +
       ylim(0, 5.5) +
       labs(x = "type", y = "Average Rating", 
            title = "Average Rating by Donut type") +
@@ -241,7 +243,7 @@ server <- function(input, output, session) {
     ggplot(count_data, aes(x = reorder(type, n), y = n)) +
       geom_col(fill = "darkgreen", alpha = 0.7) +
       geom_text(aes(label = n), hjust = -0.1, size = 4) +
-      coord_flip() +
+      #coord_flip() +
       labs(x = "type", y = "Number of Responses", 
            title = "Response Count by type") +
       theme_minimal() +
