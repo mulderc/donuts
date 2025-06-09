@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 rsconnect/
+donut_survey_data.csv
+donuts.Rproj
