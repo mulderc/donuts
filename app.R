@@ -45,8 +45,59 @@ save_data <- function(data) {
 
 # Define UI
 ui <- fluidPage(
+  tags$head(
+    tags$style(HTML("
+    body, label, input, select, textarea, .shiny-text-output, .shiny-html-output, .form-control, .table, .dataTables_wrapper, .nav, .btn {
+      color: #0a1f2b !important;
+    }
+
+    body {
+      background-color: #e3fbed;
+    }
+
+    .well {
+      background-color: #82d8cb !important;
+      border: none;
+    }
+
+    .tabbable > .nav-tabs > li.active > a,
+    .tabbable > .nav-tabs > li.active > a:focus,
+    .tabbable > .nav-tabs > li.active > a:hover {
+      background-color: #82d8cb !important;
+      color: #0a1f2b !important;
+    }
+
+    .tabbable > .nav-tabs > li > a {
+      background-color: #e3fbed !important;
+      color: #0a1f2b !important;
+    }
+
+    .btn-primary {
+      background-color: #25abb8 !important;
+      border-color: #25abb8 !important;
+      color: white !important;
+    }
+
+    .btn-secondary {
+      background-color: #82d8cb !important;
+      border-color: #82d8cb !important;
+      color: #0a1f2b !important;
+    }
+
+    .btn-info {
+      background-color: #25abb8 !important;
+      border-color: #25abb8 !important;
+      color: white !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #0a1f2b !important;
+    }
+  "))
+  ),
   
-  img(src = "logo_2025.png", height = 200, width = 200, style = "display: block; margin-left: auto; margin-right: auto;"),
+  
+  img(src = "logo_2025.png", height = 192, width = 175, style = "display: block; margin-left: auto; margin-right: auto;"),
   titlePanel("Cascadia R 2025 Donut Survey"),
   
   sidebarLayout(
